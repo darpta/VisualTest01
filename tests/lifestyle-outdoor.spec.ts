@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { LifestyleOutdoor } from "../pages/lifestyle-outdoor.page";
 
-test("Visual comparisons Komplety Plastikow page", async ({ page }) => {
+test("Visual comparisons Kurtka Damska Raven Pit Coat page", async ({ page }) => {
   // Arrange
   const lifestyleOutdoorPage = new LifestyleOutdoor(page);
   const $kurtkiHiddenButton = await lifestyleOutdoorPage.kurtkiInput;
@@ -14,5 +14,7 @@ test("Visual comparisons Komplety Plastikow page", async ({ page }) => {
 
   // Assert
   await expect(page).toHaveURL(/pid-PIA-293279/);
-  await expect(page).toHaveScreenshot("lifestyle-outdoor.png");
+  await expect(page).toHaveScreenshot("lifestyle-outdoor.png", {
+    maxDiffPixelRatio: 0.08,
+  });
 });

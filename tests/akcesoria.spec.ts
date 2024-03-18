@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { Akcesoria } from "../pages/akcesoria.page";
 
-test("Visual comparisons Komplety Plastikow page", async ({ page }) => {
+test("Visual comparisons Nawigacja GPS page", async ({ page }) => {
   // Arrange
   const akcesoriaPage = new Akcesoria(page);
 

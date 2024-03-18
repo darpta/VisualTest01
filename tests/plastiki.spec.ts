@@ -14,6 +14,6 @@ test("Visual comparisons Komplety Plastikow page", async ({ page }) => {
     // Assert
     await expect(page).toHaveURL(/plastiki-i-okleiny/);
     await expect(page).toHaveScreenshot("plastiki-okleiny.png", {
-      maxDiffPixels: 90000,
+      maxDiffPixelRatio: 0.08,
     });
 });

@@ -7,7 +7,8 @@ test("Visual comparisons Kurtka Damska Raven Pit Coat page", async ({ page }) =>
   const $kurtkiHiddenButton = await lifestyleOutdoorPage.kurtkiInput;
 
   // Act
-  await page.goto("https://www.24mx.pl");
+  await page.goto("/");
+  await page.getByRole("button", { name: "OK" }).click();
   await page.getByRole('link', { name: 'Lifestyle i Outdoor' }).click();
   await $kurtkiHiddenButton.evaluate((Node: HTMLElement) => Node.click())
   await lifestyleOutdoorPage.kurtkaDamskaRavenPitCoat.click();

@@ -6,7 +6,8 @@ test("Visual comparisons Nawigacja GPS page", async ({ page }) => {
   const akcesoriaPage = new Akcesoria(page);
 
   // Act
-  await page.goto("https://www.24mx.pl");
+  await page.goto("/");
+  await page.getByRole("button", { name: "OK" }).click();
   await akcesoriaPage.topMenu.akcesoriaButton.click();
   await akcesoriaPage.nawigacjaGpsInput.click();
 

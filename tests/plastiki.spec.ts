@@ -6,7 +6,6 @@ test("Visual comparisons Komplety Plastikow page", async ({ page }) => {
     // Arrange
     const plastikiPage = new PlastikiOkleiny(page);
 
-
     // Act
     await page.goto("https://www.24mx.pl");
     await plastikiPage.topMenu.plastikiOkleinyButton.click();
